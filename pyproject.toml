@@ -6,5 +6,8 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "django>=5.1.4",
+    "django-cotton>=1.5.2",
     "django-unfold>=0.44.0",
+    "djangorestframework>=3.15.2",
+    "pillow>=11.1.0",
 ]
