@@ -1,0 +1,10 @@
+[project]
+name = "vapdj2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.1.4",
+    "django-unfold>=0.44.0",
+]
