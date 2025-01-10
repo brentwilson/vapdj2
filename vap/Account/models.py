@@ -7,7 +7,7 @@ class UserAccount(AbstractUser):
     last_name = models.CharField(max_length=255)
     email = models.EmailField(max_length=255, unique=True)
     company = models.ForeignKey('Company', on_delete=models.CASCADE, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    phone = models.CharField(max_length=20)
     updated_at = models.DateTimeField(auto_now=True)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
