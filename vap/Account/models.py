@@ -8,6 +8,7 @@ class UserAccount(AbstractUser):
     email = models.EmailField(max_length=255, unique=True)
     company = models.ForeignKey('Company', on_delete=models.CASCADE, null=True)
     phone = models.CharField(max_length=20)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
