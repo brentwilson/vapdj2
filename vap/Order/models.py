@@ -17,6 +17,7 @@ class Quote(models.Model):
     document_date = models.DateField(null=True)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
     status = models.CharField(max_length=255, choices=STATUSCHOICES.choices, default=STATUSCHOICES.QUOTE)
+    complete = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
