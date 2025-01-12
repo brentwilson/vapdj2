@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import environ
+from django.templatetags.static import static
+from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 
 env = environ.Env()
 
@@ -54,6 +57,7 @@ INSTALLED_APPS = [
     'Catalog',
     'Account',
     'Order',
+    'Pages'
     
 ]
 
@@ -150,3 +154,11 @@ STATIC_ROOT = BASE_DIR / 'static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'Account.UserAccount'
+
+UNFOLD = {
+  'SITE_LOGO': {
+        'light': lambda request: static('images/veterans-alliance-partners_logo.png'),  # light mode
+        'dark': lambda request: static('images/veterans-alliance-partners_logo.png'),  # dark mode
+    },
+
+}
