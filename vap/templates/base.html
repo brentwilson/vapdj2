@@ -13,11 +13,14 @@
       rel="stylesheet"
       href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
     />
-    <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+
+  <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
 </head>
-<body>
+<body class="font-THICCCBOI text-[0.85rem]">
+<div class="grow shrink-0">
   {% include "header.html" %}
-  <div>{% block maincontent %} {% endblock maincontent %}</div>
+  {% block maincontent %} {% endblock maincontent %}
+</div>
  {% include "footer.html" %}   
 </body>
 </html>
